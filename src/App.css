@@ -1,0 +1,101 @@
+* {
+  transition: all 0.3s;
+}
+
+#root {
+  height: 100vh;
+}
+
+.element-info > h2 {
+  margin: 0 20px;
+}
+
+body {
+  font-family: "Arial";
+}
+
+.app {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards-container {
+  margin-top: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: inline-block;
+  margin: 5px;
+  height: calc(100vh / 4);
+  width: 15.5%;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(0.98);
+}
+
+.react-card-flip, .card-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  background-size: cover;
+}
+
+.element-info {
+  margin-top: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.element-info2 {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.element-info2 button {
+  width: 10%;
+  appearance: none;
+  background: black;
+  color: white;
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+.login-form_stargame{
+  width: 200px;
+  background:#f2f2f2;
+  border-radius: 10px;
+  padding:40px;
+  margin:auto;
+  position: relative;
+  top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%);
+}
+
+.login-form_stargame input{
+  appearance: none;
+  width: 100%;
+  margin: 0;
+  padding: 7px;
+  font-size: 16px;
+  text-transform: uppercase;
+  border:1px solid black;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+}
+
+.login-form_stargame button{
+  width: 100%;
+  appearance: none;
+  background: black;
+  color: white;
+  text-transform: uppercase;
+  padding: 10px;
+}
