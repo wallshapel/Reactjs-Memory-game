@@ -121,6 +121,7 @@ function App() {
     	setDisabledCards([]);
     	setHits(0);
     	setMiss(0);
+    	setName('')
     	getCards();
     }
 
