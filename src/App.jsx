@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Card from './Components/Card';	
 import './App.css';
 
@@ -24,7 +24,7 @@ function App() {
 				name: data.entries[i].fields.image.title	
 			})
 		}
-		return images
+		return images;
 	}
 
 	const getCards = async () => {
@@ -94,12 +94,14 @@ function App() {
 	    resetCards();
 	}
 
+	const inputName = useRef();  // Funciona como un id, solo que este recoge todos los atributos y métodos de la etiqueta en donde se encuentre
+
 	const start = () => {
 		if (name !== '')
 			setGameState(true); // Juego iniciado.	
 		else {
 			alert('Type a name');
-			document.getElementById('name').focus();
+			inputName.current.focus();
 		}
 	}
 
@@ -128,7 +130,7 @@ function App() {
 	if (gameState === false) {
 		return (
 			<div className='login-form_stargame'>
-				<input type='text' id='name' onChange={(e) => setName(e.target.value) } onKeyDown={ start2 } autoFocus placeholder='Type your name' />
+				<input type='text' ref={ inputName } onChange={(e) => setName(e.target.value) } onKeyDown={ start2 } autoFocus placeholder='Type your name' />
 				<button onClick={ start }>Start</button>
 			</div>
 		)
